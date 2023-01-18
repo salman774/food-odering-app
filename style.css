@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+/* header */
+
+header {
+  background-image: url("images/chai\ khana\ header.jpeg");
+  height: 200px;
+  width: auto;
+  background-size: auto;
+}
+header p {
+  font-size: 30px;
+  color: rgb(54, 214, 40);
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+}
+header span p {
+  font-size: 40px;
+}
+
+
