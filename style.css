@@ -69,3 +69,50 @@ header span p {
   background-color: white;
   transform: scale(1.4);
 }
+
+/*  your-order */
+.your-order div:nth-of-type(1) p {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background-color: black;
+}
+
+/* order-detail */
+.order-detail {
+  display: flex;
+  background-color: #caf0f8;
+  padding: 20px;
+}
+.order-detail p:nth-of-type(1) {
+  font-size: 20px;
+}
+.order-detail p:nth-of-type(2) {
+  margin-left: 160px;
+}
+.order-detail button {
+  color: #90e0ef;
+  background-color: #03045e;
+  padding: 5px;
+  border: none;
+  margin-left: 5px;
+}
+
+/* total price */
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #d4a373;
+  color: #023047;
+}
+.order-button button {
+  padding: 20px;
+  color: white;
+  background-color: black;
+  border: none;
+  display: block;
+  margin: auto;
+  width: 100px;
+  margin-top: 10px;
+}
