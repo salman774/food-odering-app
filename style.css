@@ -1,19 +1,21 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 body {
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: block;
+  height: auto;
 }
 /* header */
 
 header {
-  background-image: url("images/chai\ khana\ header.jpeg");
-  height: 200px;
+  background-image: url("images/chai khana header.jpeg");
+  height: 150px;
+  background-repeat: repeat-x;
   width: auto;
-  background-size: auto;
 }
 header p {
   font-size: 30px;
@@ -23,6 +25,48 @@ header p {
 }
 header span p {
   font-size: 40px;
+  color: aqua;
 }
 
+/* menu */
 
+.menu {
+  display: flex;
+  height: 180px;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.menu img {
+  height: 120px;
+}
+
+.menu div p {
+  font-size: 16px;
+  color: rgb(41, 83, 37);
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-weight: 900;
+  background-color: white;
+}
+.chai-information p:nth-last-of-type(2) {
+  color: rgb(26, 78, 78);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.menu button {
+  align-self: center;
+  background-color: white;
+  width: 40px;
+  text-align: center;
+  background-color: rgb(54, 214, 40);
+  height: 30px;
+}
+
+.menu button:hover {
+  border-radius: 50%;
+  align-self: center;
+  background-color: white;
+  transform: scale(1.4);
+}
