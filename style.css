@@ -12,14 +12,13 @@ body {
 /* header */
 
 header {
-  background-image: url("images/chai khana header.jpeg");
-  height: 150px;
-  background-repeat: repeat-x;
+  background-color: black;
+  height: 250px;
   width: auto;
 }
 header p {
   font-size: 30px;
-  color: rgb(54, 214, 40);
+  color: rgb(238, 119, 50);
   font-family: "Dancing Script", cursive;
   text-align: center;
 }
