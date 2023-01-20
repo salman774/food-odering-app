@@ -12,7 +12,7 @@ body {
 /* header */
 
 header {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   height: 250px;
   width: auto;
 }
@@ -24,7 +24,7 @@ header p {
 }
 header span p {
   font-size: 40px;
-  color: aqua;
+  color: rgb(0, 0, 0);
 }
 
 /* menu */
