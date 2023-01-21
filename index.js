@@ -1,29 +1,33 @@
 import { menuArray } from "./fooddata.js";
 const menuSection = document.getElementById("menu-section");
+const yourOrder = document.getElementById("your-order");
 let array = [];
 
-function taregetobjectofchai() {
+function taregetdatasetofchai() {
   menuSection.addEventListener("click", function (e) {
     if (e.target.dataset.add) {
       handleLikeClick(e.target.dataset.add);
     }
   });
 }
-taregetobjectofchai();
+taregetdatasetofchai();
 
 function handleLikeClick(targetchai) {
   const targetchaiObj = menuArray.filter(function (chai) {
     return chai.id === targetchai;
-  });
-  targetedobject(targetchaiObj);
+  })[0];
+  // const realTargetTweetObject = targetTweetObj[0]
+  pushvaluetoarray(targetchaiObj);
 }
 
 handleLikeClick();
 
-function targetedobject(value) {
+function pushvaluetoarray(value) {
   array.push(value);
   console.log(array);
 }
+
+
 
 function renderMenu() {
   let fullmenu = "";
@@ -41,7 +45,7 @@ function renderMenu() {
         <p>${menu.price}</p>
         <hr />
       </div >
-      <button class="add-to-order"  data-add="${menu.id}">+</button>
+      <button class="add-to-order" data-add="${menu.id}">+</button>
     </div>
   `;
   });

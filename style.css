@@ -63,13 +63,6 @@ header span p {
   height: 30px;
 }
 
-.menu button:hover {
-  border-radius: 50%;
-  align-self: center;
-  background-color: white;
-  transform: scale(1.4);
-}
-
 /*  your-order */
 .your-order div:nth-of-type(1) p {
   text-align: center;
