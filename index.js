@@ -2,37 +2,8 @@ import { menuArray } from "./fooddata.js";
 const menuSection = document.getElementById("menu-section");
 const yourOrder = document.getElementById("your-order");
 let array = [];
-const lastelementofarray = [];
 
-function taregetdatasetofchai() {
-  menuSection.addEventListener("click", function (e) {
-    if (e.target.dataset.add) {
-      handleLikeClick(e.target.dataset.add);
-    }
-  });
-}
-taregetdatasetofchai();
-
-function handleLikeClick(targetchai) {
-  let targetchaiObj = menuArray.filter(function (chai) {
-    return chai.id === targetchai;
-  });
-  targetchaiObj = targetchaiObj[0];
-  pushvaluetoarray(targetchaiObj);
-  console.log(array);
-}
-
-function pushvaluetoarray(value) {
-  array.push(value);
-}
-
-function lastobjectarrayfunction() {
-  for (let i = 0; i < array.length; i++) {
-    console.log(array[i - 1]);
-  }
-}
-lastobjectarrayfunction();
-
+//* 1
 function renderMenu() {
   let fullmenu = "";
   menuArray.forEach(function (menu) {
@@ -56,3 +27,43 @@ function renderMenu() {
   menuSection.innerHTML = fullmenu;
 }
 renderMenu();
+
+//* 2
+function taregetdatasetofchai() {
+  menuSection.addEventListener("click", function (e) {
+    if (e.target.dataset.add) {
+      handleLikeClick(e.target.dataset.add);
+    }
+  });
+}
+taregetdatasetofchai();
+
+//* this function will only run when the added button is clicked
+
+function handleLikeClick(targetchai) {
+  let targetchaiObj = menuArray.filter(function (chai) {
+    return chai.id === targetchai;
+  });
+  targetchaiObj = targetchaiObj[0];
+  pushvaluetoarray(targetchaiObj);
+}
+
+function pushvaluetoarray(value) {
+  array.push(value);
+  console.log(array);
+  renderorderdetail();
+}
+
+function renderorderdetail() {
+  let order = "";
+  array.forEach(function (renderorder) {
+    order += `
+  <div class="order-detail">
+    <p>${renderorder.name}</p>
+   <button type="reset">remove</button>
+   <p>${renderorder.price}</p>
+  </div>
+  <hr/>`;
+  });
+  yourOrder.innerHTML = order;
+}
