@@ -2,6 +2,7 @@ import { menuArray } from "./fooddata.js";
 const menuSection = document.getElementById("menu-section");
 const yourOrder = document.getElementById("your-order");
 let array = [];
+const lastelementofarray = [];
 
 function taregetdatasetofchai() {
   menuSection.addEventListener("click", function (e) {
@@ -13,21 +14,24 @@ function taregetdatasetofchai() {
 taregetdatasetofchai();
 
 function handleLikeClick(targetchai) {
-  const targetchaiObj = menuArray.filter(function (chai) {
+  let targetchaiObj = menuArray.filter(function (chai) {
     return chai.id === targetchai;
-  })[0];
-  // const realTargetTweetObject = targetTweetObj[0]
+  });
+  targetchaiObj = targetchaiObj[0];
   pushvaluetoarray(targetchaiObj);
-}
-
-handleLikeClick();
-
-function pushvaluetoarray(value) {
-  array.push(value);
   console.log(array);
 }
 
+function pushvaluetoarray(value) {
+  array.push(value);
+}
 
+function lastobjectarrayfunction() {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i - 1]);
+  }
+}
+lastobjectarrayfunction();
 
 function renderMenu() {
   let fullmenu = "";
