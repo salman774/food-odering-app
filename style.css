@@ -62,13 +62,9 @@ header span p {
   text-align: center;
   background-color: rgb(54, 214, 40);
   height: 30px;
-}
-
-.menu button:hover {
+  border: none;
+  width: 140px;
   border-radius: 50%;
-  align-self: center;
-  background-color: white;
-  transform: scale(1.4);
 }
 
 /*  your-order */
