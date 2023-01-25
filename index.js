@@ -74,6 +74,7 @@ function renderorderdetail() {
   yourOrder.innerHTML = order;
   totalpriceefunction();
 }
+// * this function will only work when renderorderdetail is called
 
 function totalpriceefunction() {
   let price = "";
@@ -91,6 +92,8 @@ function totalpriceefunction() {
   totalPrice.innerHTML = price;
 }
 
+//* 4
+// *```````````````````````````````````````````````````````````````````````````````
 function removeitemsfromcart() {
   yourOrder.addEventListener("click", function (e) {
     console.log(e.target.dataset.remove);
