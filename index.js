@@ -52,8 +52,8 @@ function handleLikeClick(targetchai) {
 
 function pushvaluetoarray(value) {
   array.push(value);
-  renderorderdetail();
   console.log(array);
+  renderorderdetail();
 }
 
 //* 3 -----------------------------------------------------------------------
@@ -94,6 +94,15 @@ function totalpriceefunction() {
 function removeitemsfromcart() {
   yourOrder.addEventListener("click", function (e) {
     console.log(e.target.dataset.remove);
+    if (e.target.dataset.remove) {
+      splicefunction(e.target.dataset.remove);
+    }
   });
 }
 removeitemsfromcart();
+function splicefunction(targetremovevalue) {
+  const index = array.indexOf(targetremovevalue - 1);
+  array.splice(index, 1);
+  renderorderdetail();
+  console.log(array);
+}
