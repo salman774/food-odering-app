@@ -104,5 +104,4 @@ function splicefunction(targetremovevalue) {
   const index = array.indexOf(targetremovevalue - 1);
   array.splice(index, 1);
   renderorderdetail();
-  console.log(array);
 }
