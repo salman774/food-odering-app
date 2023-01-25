@@ -66,6 +66,9 @@ header span p {
   width: 140px;
   border-radius: 50%;
 }
+.menu button:hover {
+  background-color: rgb(23, 60, 163);
+}
 
 /*  your-order */
 .your-order {
