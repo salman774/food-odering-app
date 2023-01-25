@@ -3,6 +3,7 @@ const menuSection = document.getElementById("menu-section");
 const yourOrder = document.getElementById("your-order");
 let array = [];
 let totalPrice = document.getElementById("total-price");
+let orderDetail = document.getElementsByClassName("order-detail");
 
 //* 1
 function renderMenu() {
@@ -51,17 +52,21 @@ function handleLikeClick(targetchai) {
 
 function pushvaluetoarray(value) {
   array.push(value);
-  console.log(array);
   renderorderdetail();
+  console.log(array);
 }
 
+//* 3 -----------------------------------------------------------------------
+
 function renderorderdetail() {
+  let value = 0;
   let order = "";
   array.forEach(function (renderorder) {
+    value += 1;
     order += `
   <div class="order-detail">
     <p>${renderorder.name}</p>
-   <button type="reset">remove</button>
+   <button data-remove="${value}" type="reset">remove</button>
    <p>${renderorder.price} RS. </p>
   </div>
   <hr/>`;
@@ -69,17 +74,6 @@ function renderorderdetail() {
   yourOrder.innerHTML = order;
   totalpriceefunction();
 }
-
-// function totalpriceefunction() {
-//   let price = "";
-//   array.forEach(function (priceofchai) {
-//     price += ` <div id="total-price" class="total-price">
-//     <p>total-price:</p>
-//     <p>${priceofchai.price} </p>
-//   </div>`;
-//   });
-//   totalPrice.innerHTML = price;
-// }
 
 function totalpriceefunction() {
   let price = "";
@@ -90,10 +84,16 @@ function totalpriceefunction() {
   for (let i = 0; i < result.length; i++) {
     sum += result[i];
   }
-  console.log(sum);
   price += ` 
         <p>Total-price:</p>
         <p>${sum} rupees</p>
       </div>`;
   totalPrice.innerHTML = price;
 }
+
+function removeitemsfromcart() {
+  yourOrder.addEventListener("click", function (e) {
+    console.log(e.target.dataset.remove);
+  });
+}
+removeitemsfromcart();

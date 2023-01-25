@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+
 export const menuArray = [
   {
     name: "karak-chai",
@@ -7,6 +9,7 @@ export const menuArray = [
     id: `karak-chai`,
     price: 300,
     Image: "images/karakchai -PhotoRoom.png-PhotoRoom.png",
+    uuid: uuidv4(),
   },
   {
     name: "kashmiri-chai",
@@ -16,6 +19,7 @@ export const menuArray = [
     id: `kashmiri`,
     price: 500,
     Image: "images/kashmiri-pink-chai-1-featured-PhotoRoom.png-PhotoRoom.png",
+    uuid: uuidv4(),
   },
   {
     name: "everyday-chai",
@@ -25,5 +29,6 @@ export const menuArray = [
     id: `everyday`,
     price: 150,
     Image: "images/everday.jpeg",
+    uuid: uuidv4(),
   },
 ];
