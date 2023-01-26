@@ -8,6 +8,7 @@ body {
   margin: auto;
   display: block;
   height: auto;
+  position: relative;
 }
 /* header */
 
@@ -120,8 +121,55 @@ header span p {
   margin-top: 10px;
 }
 
+.order-button button:disabled {
+  padding: 20px;
+  color: white;
+  background-color: rgb(160, 149, 149);
+  border: none;
+  display: block;
+  margin: auto;
+  width: 100px;
+  margin-top: 10px;
+}
+
 /* my order */
 .my-order {
   text-align: center;
   font: 1.5em sans-serif;
+}
+
+/* cutomer detail */
+
+.customer-detail {
+  width: 100%;
+  height: auto;
+  border: 2px solid red;
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: 460px;
+  bottom: auto;
+  background-image: url(./images/background.jpg);
+  /* display: none; */
+}
+.customer-detail div {
+  margin: 10px;
+}
+.customer-detail div p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+.customer-detail div input,
+.customer-detail div button {
+  padding: 12px;
+  margin-left: 55px;
+  font-size: 16px;
+}
+.customer-detail div button {
+  background-color: rgb(115, 136, 83);
+  color: #fffafa;
+  width: 205px;
+  margin-left: 70px;
+  border: none;
 }

@@ -3,7 +3,7 @@ const menuSection = document.getElementById("menu-section");
 const yourOrder = document.getElementById("your-order");
 let array = [];
 let totalPrice = document.getElementById("total-price");
-let orderDetail = document.getElementsByClassName("order-detail");
+const orderButton = document.getElementById("order");
 
 //* 1
 function renderMenu() {
@@ -43,6 +43,7 @@ taregetdatasetofchai();
 //* this function will only run when the added button is clicked
 
 function handleLikeClick(targetchai) {
+  orderButton.disabled = false;
   let targetchaiObj = menuArray.filter(function (chai) {
     return chai.id === targetchai;
   });
@@ -108,3 +109,28 @@ function splicefunction(targetremovevalue) {
   array.splice(index, 1);
   renderorderdetail();
 }
+
+// *5
+//* this will happen when order button is clicked order button
+
+function orderButtonisclicked() {
+  orderButton.addEventListener("click", function () {
+    let customerDetail = document.getElementById("customer-detail");
+    customerDetail.innerHTML = `<div class="customer-detail">
+                                  <div>
+                                  <p>Enter card detail</p>
+                                  </div>
+                                  <div>
+                                  <input type="text" placeholder="Enter your name" />
+                                  </div>
+                                  <div><input type="number" placeholder="Enter card number" /></div>
+                                  <div>
+                                  <input type="number" placeholder="Enter CVC" />
+                                  </div>
+                                  <div>
+                                  <button type="submit">pay</button>
+                                </div>`;
+  });
+  // customerDetail.style.display = "block";
+}
+orderButtonisclicked();
