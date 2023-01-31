@@ -153,5 +153,8 @@ orderButton.addEventListener("click", function () {
     let message = "";
     message += `<p class="thanks">thanks, <span> ${name}</span> your order is on its way</p> `;
     messagedisplay.innerHTML = message;
+    setTimeout(function () {
+      location.reload();
+    }, 4000);
   });
 });
