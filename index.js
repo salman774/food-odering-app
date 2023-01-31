@@ -4,6 +4,8 @@ const yourOrder = document.getElementById("your-order");
 let array = [];
 let totalPrice = document.getElementById("total-price");
 const orderButton = document.getElementById("order");
+let customerDetail = document.getElementById("customer-detail");
+let messagedisplay = document.getElementById("message-display");
 
 //* 1
 function renderMenu() {
@@ -111,26 +113,45 @@ function splicefunction(targetremovevalue) {
 }
 
 // *5
-//* this will happen when order button is clicked order button
+//* this will happen when order button is clicked
 
-function orderButtonisclicked() {
-  orderButton.addEventListener("click", function () {
-    let customerDetail = document.getElementById("customer-detail");
-    customerDetail.innerHTML = `<div class="customer-detail">
-                                  <div>
-                                  <p>Enter card detail</p>
-                                  </div>
-                                  <div>
-                                  <input type="text" placeholder="Enter your name" />
-                                  </div>
-                                  <div><input type="number" placeholder="Enter card number" /></div>
-                                  <div>
-                                  <input type="number" placeholder="Enter CVC" />
-                                  </div>
-                                  <div>
-                                  <button type="submit">pay</button>
-                                </div>`;
+orderButton.addEventListener("click", function () {
+  let detail = "";
+  detail += ` <div class="customer-detail-div">
+                 <form id="payment-form">
+                               <div>
+                                <p>Enter card detail</p>
+                               </div>
+                              <div>
+                                  <input required  type="text" placeholder="Enter your name" name="customername" />
+                              </div>
+                              <div>
+                                  <input required type="number" placeholder="Enter card number" name="cutomercard" />
+                              </div>
+                              <div>
+                                  <input required type="number" placeholder="Enter CVC" name="cutomercvc" />
+                              </div>
+                              <div>
+                               <button type="submit" id="submit">pay</button> 
+                              </div>
+                 </form>
+               </div>`;
+  customerDetail.innerHTML = detail;
+  let paymentform = document.getElementById("payment-form");
+
+  paymentform.addEventListener("submit", function (e) {
+    e.preventDefault();
+    console.log("form-submitted");
+    const loginFormData = new FormData(paymentform);
+    const name = loginFormData.get("customername");
+    console.log(name);
+    let modalbox = document.getElementById("customer-detail");
+    modalbox.style.display = "none";
+    totalPrice.style.display = "none";
+    yourOrder.style.display = "none";
+    orderButton.style.display = "none";
+    let message = "";
+    message += `<p class="thanks">thanks, <span> ${name}</span> your order is on its way</p> `;
+    messagedisplay.innerHTML = message;
   });
-  // customerDetail.style.display = "block";
-}
-orderButtonisclicked();
+});

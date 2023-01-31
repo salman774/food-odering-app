@@ -140,7 +140,7 @@ header span p {
 
 /* cutomer detail */
 
-.customer-detail {
+.customer-detail-div {
   width: 100%;
   height: auto;
   border: 2px solid red;
@@ -150,26 +150,51 @@ header span p {
   top: 460px;
   bottom: auto;
   background-image: url(./images/background.jpg);
-  /* display: none; */
+  display: block;
 }
-.customer-detail div {
+.customer-detail-div div {
   margin: 10px;
 }
-.customer-detail div p {
+.customer-detail-div div p {
   text-align: center;
   font-size: 30px;
   font-weight: 400;
 }
-.customer-detail div input,
-.customer-detail div button {
+.customer-detail-div div input,
+.customer-detail-div div button {
   padding: 12px;
   margin-left: 55px;
   font-size: 16px;
 }
-.customer-detail div button {
+.customer-detail-div button {
   background-color: rgb(115, 136, 83);
   color: #fffafa;
   width: 205px;
   margin-left: 70px;
   border: none;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+/* thanks */
+.thanks {
+  padding: 20px;
+  color: black;
+  background-color: lightgreen;
+  width: 350px;
+  height: auto;
+  font-size: 20px;
+  position: absolute;
+  top: 517px;
+  left: auto;
+  right: auto;
+  bottom: auto;
+}
+
+.thanks span,
+.thanks span,
+.thanks a {
+  color: blue;
+  font-size: 26px;
+  text-decoration: none;
 }
