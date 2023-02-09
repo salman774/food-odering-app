@@ -144,7 +144,6 @@ orderButton.addEventListener("click", function () {
     console.log("form-submitted");
     const loginFormData = new FormData(paymentform);
     const name = loginFormData.get("customername");
-    console.log(name);
     let modalbox = document.getElementById("customer-detail");
     modalbox.style.display = "none";
     totalPrice.style.display = "none";
