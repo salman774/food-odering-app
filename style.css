@@ -17,8 +17,8 @@ header {
   background-image: url(./images/CHAAYE-KHANA-INSIDE-1024x680.jpg.crdownload);
   height: 280px;
   width: 100%;
-  /* background-size: contain; */
   background-size: cover;
+  object-fit: contain;
 }
 header p {
   font-size: 45px;
