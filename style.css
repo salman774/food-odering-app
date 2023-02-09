@@ -233,6 +233,8 @@ header p {
   left: auto;
   right: auto;
   bottom: auto;
+  background-color: rgba(248, 243, 243, 0.5);
+  backdrop-filter: blur(10px);
 }
 .thanks span,
 .thanks span,
