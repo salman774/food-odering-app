@@ -105,30 +105,48 @@ header p {
 .your-order {
   height: auto;
   width: auto;
+  transition: all 0.5s ease-in-out;
 }
 
 /* order-detail */
 .order-detail {
   display: flex;
   background-color: #f6f6f7;
-  padding: 20px;
+  width: 100%;
+  margin-top: 6px;
 }
 .order-detail p:nth-of-type(1) {
-  font-size: 20px;
-  color: azure;
+  color: #90e0ef;
   background-color: black;
-  padding: 2px;
-  width: 120px;
+  padding: 5px;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 .order-detail p:nth-of-type(2) {
-  margin-left: 120px;
+  margin-left: 110px;
 }
 .order-detail button {
   color: #90e0ef;
   background-color: #03045e;
-  padding: 5px;
   border: none;
   margin-left: 5px;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 
 /* total price */

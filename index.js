@@ -70,7 +70,7 @@ function renderorderdetail() {
   <div class="order-detail">
     <p>${renderorder.name}</p>
    <button data-remove="${value}" type="reset">remove</button>
-   <p>${renderorder.price} RS. </p>
+   <p>${renderorder.price} RS.</p>
   </div>
   <hr/>`;
   });
