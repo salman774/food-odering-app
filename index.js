@@ -24,7 +24,7 @@ function renderMenu() {
         <p>${menu.price} Rupess</p>
         <hr />
       </div >
-      <button class="add-to-order" data-add="${menu.id}">+</button>
+      <button class="add-to-order" data-add="${menu.id}"> <i class="fa-solid fa-cart-shopping"></i>cart</button>
     </div>
   `;
   });
