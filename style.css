@@ -26,11 +26,6 @@ header p {
   font-family: "Dancing Script", cursive;
   text-align: center;
 }
-/* header span p {
-  font-size: 30px;
-  color: rgb(57, 247, 190);
-  margin-top: 120px;
-} */
 
 /* menu */
 
@@ -192,13 +187,13 @@ header p {
 .customer-detail-div {
   width: 100%;
   height: auto;
-  border: 2px solid red;
   position: absolute;
   left: auto;
   right: auto;
   top: 460px;
   bottom: auto;
-  background-image: url(./images/background.jpg);
+  background-color: rgba(248, 243, 243, 0.5);
+  backdrop-filter: blur(10px);
   display: block;
 }
 .customer-detail-div div {
@@ -216,20 +211,20 @@ header p {
   font-size: 16px;
 }
 .customer-detail-div button {
-  background-color: rgb(115, 136, 83);
+  background-color: #3e8e41;
   color: #fffafa;
-  width: 205px;
-  margin-left: 70px;
+  width: 235px;
   border: none;
   padding: 12px;
-  margin-top: 10px;
+  margin-top: 7px;
+  text-align: center;
 }
 
 /* thanks */
 .thanks {
   padding: 20px;
   color: black;
-  background-color: lightgreen;
+  background-color: #3e8e41;
   width: 350px;
   height: auto;
   font-size: 20px;
@@ -239,7 +234,6 @@ header p {
   right: auto;
   bottom: auto;
 }
-
 .thanks span,
 .thanks span,
 .thanks a {
